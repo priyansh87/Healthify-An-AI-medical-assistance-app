@@ -1,35 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import React, { useEffect, useState } from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+import { Home, Onboarding, Profile } from './pages';
+import { useStateContext } from './context';
+import { usePrivy } from '@privy-io/react-auth';
+import MedicalRecords from './pages/records/index'
+import ScreeningSchedules from './pages/ScreeningSchedules'
+import SingleRecordDetails from './pages/records/single-record-details';
+import Footer from './components/Footer';
 function App() {
-  const [count, setCount] = useState(0)
+    const navigate = useNavigate()
+    const {currentUser , users , setUsers , fetchUsers } = useStateContext()
+    const {user , authenticated , ready , login , logout , } = usePrivy()
+    const [ checkUser , setCheckUser ] = useState([]) ;
+
+    useEffect(()=>{
+        if(ready && !authenticated){
+          login() ;
+          
+
+        } else if ( user && !currentUser  ){
+            navigate('/onboarding')
+        } 
+    }, [  ready, currentUser  , navigate])
+    const t = true ;
+    useEffect(() => {
+      if(ready &&  authenticated){
+        fetchUsers();
+      setCheckUser(users);
+      console.log("this is coming from the local state ", users);
+    
+      let checker = checkUser.filter((u) => u.createdBy === currentUser?.createdBy);
+      
+      if (checkUser.length === 0) {
+        navigate('/onboarding');
+      }
+      }
+    }, [currentUser, authenticated, ready]);
+    
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="relative flex  min-h-screen flex-row bg-[#13131a] p-4">
+      {/* Sidebar */}
+      <div className="relative mr-20 hidden sm:flex">
+        <Sidebar />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      {/* Main Content */}
+      <div className="mx-auto max-w-[1280px] flex-1 w-full sm:pr-5">
+        <Navbar />
+
+        {/* Routes */}
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/onboarding' element={<Onboarding/>} />
+          <Route path='/profile' element={<Profile/>} />
+          <Route path='/medical-records' element={<MedicalRecords/>} />
+          <Route path='/medical-records/:recordName' element={<SingleRecordDetails/>} />
+          <Route path='/screening-schedules' element={<ScreeningSchedules/>} />
+        </Routes>
+      <Footer/>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
-export default App
+export default App;
