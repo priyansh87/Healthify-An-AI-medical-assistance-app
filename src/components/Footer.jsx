@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div className="relative isolate overflow-hidden bg-[#13131a] py-16 sm:py-24 lg:py-32 h-[60vh] mt-60">
+    <div className="relative isolate overflow-hidden bg-[#13131a] py-16 sm:py-24 z-0 lg:py-32 h-[60vh] mt-60">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
@@ -10,7 +10,7 @@ function Footer() {
               Subscribe to our newsletter.
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-300">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt dolore.
+              Get the latest updates on AI-driven medical assistance, health tips, and innovations in healthcare technology.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
@@ -27,7 +27,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="flex-none rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Subscribe
               </button>
@@ -51,9 +51,9 @@ function Footer() {
                   />
                 </svg>
               </div>
-              <dt className="mt-4 font-semibold text-white">Weekly articles</dt>
+              <dt className="mt-4 font-semibold text-white">AI Health Insights</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.
+                Stay informed with weekly articles on how AI is transforming the healthcare industry and improving patient care.
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -73,9 +73,9 @@ function Footer() {
                   />
                 </svg>
               </div>
-              <dt className="mt-4 font-semibold text-white">No spam</dt>
+              <dt className="mt-4 font-semibold text-white">No spam, just health</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.
+                Receive only relevant updates—no promotional clutter, just insights on health and wellness driven by AI.
               </dd>
             </div>
           </dl>

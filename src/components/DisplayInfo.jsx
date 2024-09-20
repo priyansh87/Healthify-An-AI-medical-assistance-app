@@ -6,7 +6,7 @@ import { usePrivy } from '@privy-io/react-auth';
 import { useStateContext } from '../context';
 function DisplayInfo() {
     const navigate = useNavigate() ;
-    const { user } = usePrivy() ; 
+     
     const { fetchUserRecords , records , fetchUserByEmail } = useStateContext() ; 
     const [metrics, setmetrics] = useState({
         totalFolders: 0,
@@ -16,6 +16,8 @@ function DisplayInfo() {
         pendingScreenings : 0 , 
         overdueScreenings : 0 , 
     })
+    const { user } = usePrivy() ;
+    
 
     
 
@@ -71,10 +73,28 @@ function DisplayInfo() {
             onclick: () =>navigate('/screenings/overdue')
         },
     ]
+    
 
   return (
     <div className="flex  flex-wrap gap-[26px]">
-        <div className="mt-7 grid w-full gap-4 sm:grid-cols-2 sm:gap-6 lg: grid-cols-2">
+        <div className="flex flex-wrap gap-[26px]">
+         <div className="bg-green-600 text-white p-6 sm:p-8 md:p-10 rounded-lg w-[82vw] h-[20vw] sm:h-auto lg:h-[30vw] mx-auto mt-10">
+         <h1 className="text-2xl sm:text-3xl md:text-8xl font-bold mb-2">
+      Welcome back ! <span className="text-gray-100"></span>
+        </h1>
+        <p className="text-gray-100 mb-4 text-sm sm:text-base md:text-4xl md:mt-16">
+      Hope you've been well.<br />
+      What can we help you with today?
+        </p>
+        <button className="bg-white text-green-600 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-100">
+      let's get started 
+        </button>
+        </div>
+        </div>
+
+
+
+        {/* <div className="mt-7 grid w-full gap-4 sm:grid-cols-2 sm:gap-6 lg: grid-cols-2">
             {metricsData.slice(0,2).map((metric)=>(
                 <MetricsCard key={metric.title} {...metric} />
             ))}
@@ -84,7 +104,7 @@ function DisplayInfo() {
             {metricsData.slice(2).map((metric)=>(
                 <MetricsCard key={metric.title} {...metric} />
             ))}
-        </div>
+        </div> */}
     </div>
   )
 }
