@@ -23,8 +23,6 @@ export default function Onboarding() {
         }
 
         const newUser = await createUser(userData)
-        console.log(newUser)
-        console.log(username,age,location);
 
         if( newUser ){
             navigate('/profile') ;

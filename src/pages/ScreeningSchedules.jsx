@@ -4,7 +4,6 @@ import KanbanBoard from './KanbanBoard';
 
 function ScreeningSchedules() {
   const { state } = useLocation(); // Destructuring the state from useLocation
-  console.log("coming from the state from screenig schedule s:",state)
 
   return (
     <div className='w-full overflow-scroll'>

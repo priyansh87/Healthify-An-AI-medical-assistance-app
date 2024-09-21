@@ -58,7 +58,6 @@ function Index() {
   const handleNavigate = (name) => {
     const filteredRecords = userRecords.filter((record) => record.recordName === name);
     if (filteredRecords.length > 0) {
-      console.log( "being stored in the state ",filteredRecords) ; 
       navigate(`/medical-records/${name}`, {
         state: filteredRecords[0],
         

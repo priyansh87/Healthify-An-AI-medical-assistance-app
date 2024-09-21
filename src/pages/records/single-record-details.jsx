@@ -18,7 +18,6 @@ function SingleRecordDetails() {
   // ! here is the state :
   const { state } = useLocation();
 
-  console.log("the state is : when the record is clicked ?  ", state);
   const navigate = useNavigate();
 
   const [file, setFile] = useState(null);
@@ -117,7 +116,6 @@ Ensure your response is clear, structured in well-organized paragraphs, and easy
       setFilename("");
       setFile(null);
     } catch (error) {
-      console.log("error while handleing file upload ", error);
       setUploadSuccess(false);
       setIsModalOpen(false);
     } finally {
@@ -166,7 +164,6 @@ Ensure your response is clear, structured in well-organized paragraphs, and easy
       text = text.replace(/^```json/, '').replace(/```$/, '').trim();
       // Attempt to parse the JSON
       const parseResponse = JSON.parse(text);
-      console.log("is the response fine ? ",parseResponse)
   
       await updateRecord({
         documentID: state.id,

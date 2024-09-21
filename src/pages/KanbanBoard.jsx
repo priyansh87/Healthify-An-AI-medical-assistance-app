@@ -33,8 +33,6 @@ function KanbanBoard({ state }) {
 
   // Optional: Use effect to update state if `state` changes
   useEffect(() => {
-    console.log("prinintg state from the kanban which is being passed as a prop : " , state )
-    console.log( "testing whether the kanban is working or not ? ", state?.Columns)
     setColumns(defaultCols);
     setTasks(defaultTasks);
   }, [state]);

@@ -29,7 +29,6 @@ function App() {
       if(ready &&  authenticated){
         fetchUsers();
       setCheckUser(users);
-      console.log("this is coming from the local state ", users);
     
       let checker = checkUser.filter((u) => u.createdBy === currentUser?.createdBy);
       
