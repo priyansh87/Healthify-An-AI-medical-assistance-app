@@ -7,7 +7,7 @@
 
 ## Project Overview
 
-**AI-Powered Healthcare Report Analyzer** is a platform designed to simplify medical report analysis, providing patients with easy-to-understand summaries and personalized healthcare plans. This platform is focused on improving healthcare access, especially in underserved areas. By utilizing cutting-edge technologies like **Google Gemini AI** for report analysis, **SQL with Drizzle ORM** for backend management, and **Privy** for secure authentication, the project aims to make healthcare more understandable and accessible.
+**Healthify- AI-Powered Healthcare Report Analyzer** is a platform designed to simplify medical report analysis, providing patients with easy-to-understand summaries and personalized healthcare plans. This platform is focused on improving healthcare access, especially in underserved areas. By utilizing cutting-edge technologies like **Google Gemini AI** for report analysis, **SQL with Drizzle ORM** for backend management, and **Privy** for secure authentication, the project aims to make healthcare more understandable and accessible.
 
 ### Key Features
 
@@ -60,6 +60,10 @@ Ensure that you have the following installed:
 
    - Create a `.env` file in the root directory.
    - Add necessary environment variables for **Google Gemini API**, **Privy**, and other services as required.
+   
+   - Make sure to replace `'your_api_key_here'` with an actual placeholder or instruction for users on how to obtain their API key.
+   - model : Google Gemini-1.5-pro
+
 
 4. Run the project in development mode:
 
