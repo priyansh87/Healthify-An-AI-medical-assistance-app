@@ -2,6 +2,7 @@
 # AI-Powered Healthcare Report Analyzer
 
 ### Bridging Gaps in Personalized and Accessible Healthcare
+-LINK TO VIDEO DEMO AND PRESENTATION [Google Drive Folder](https://drive.google.com/drive/u/1/folders/1pQJ8HLkOUUn6BuxV291umtcUK1KIQgE5)
 
 ---
 
