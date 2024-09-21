@@ -28,34 +28,8 @@ function Profile() {
         <p><span className="font-semibold">Location:</span> {profile.location}</p>
         <p><span className="font-semibold">Email:</span> {profile.createdBy}</p>
       </div>
-      <div className="mt-8">
-        <h2 className="text-white text-2xl font-semibold mb-4">Records</h2>
-        <ul className="list-disc list-inside text-white">
-          {profile.records?.length ? (
-            profile.records.map((record, index) => (
-              <li key={index} className="mb-2">
-                {record.name}
-              </li>
-            ))
-          ) : (
-            <li>No records found</li>
-          )}
-        </ul>
-      </div>
-      <div className="mt-8">
-        <h2 className="text-white text-2xl font-semibold mb-4">Diagnosed Problems</h2>
-        <ul className="list-disc list-inside text-white">
-          {profile.diagnosedProblems?.length ? (
-            profile.diagnosedProblems.map((problem, index) => (
-              <li key={index} className="mb-2">
-                {problem}
-              </li>
-            ))
-          ) : (
-            <li>No diagnosed problems found</li>
-          )}
-        </ul>
-      </div>
+      
+      
     </div>
   );
 }

@@ -19,14 +19,17 @@
 ---
 
 ## Tech Stack
-
 - **Frontend**: React.js
-- **Backend**: SQL with Drizzle ORM
+  - The highly responsive frontend, built using React.js, provides an intuitive user interface. Patients can seamlessly upload medical reports, view personalized care plans, and access detailed summaries from a user-friendly dashboard.
+- **CSS**: Tailwind CSS
+  - Tailwind CSS ensures that the design is sleek, modern, and responsive across devices.
+- **Backend**: Node.js and SQL with Drizzle ORM
+  - The platform’s backend manages vast amounts of medical data using Node.js and SQL with Drizzle ORM. The system efficiently stores, retrieves, and analyzes data to deliver fast performance, ensuring user data is handled with precision.
 - **Authentication**: Privy
-- **AI Integration**: Google Gemini API
-- **Deployment**: Vite for development and production builds
+  - Privy authentication ensures user data privacy and security, maintaining the highest standards of confidentiality for sensitive medical information.
+- **AI**: Google Gemini API
+  - Google Gemini API powers the core AI functionality, providing accurate interpretations of medical reports and personalized care plans based on the analysis.
 
----
 
 ## Installation and Setup
 
