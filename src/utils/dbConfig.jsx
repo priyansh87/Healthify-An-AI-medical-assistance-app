@@ -5,7 +5,7 @@ import * as schema from './Schema.jsx'
  
 
 const sql = neon(
-    "postgresql://beat_cancer_owner:QPzeZ8rvCS1X@ep-tiny-boat-a5jymwu0.us-east-2.aws.neon.tech/beat_cancer?sslmode=require"
+    "add you db url"
 )
 
 export const db = drizzle(sql , {schema})
